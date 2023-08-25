@@ -12,6 +12,8 @@ class HomeScreen extends StatelessWidget {
         title: const Text("Is this number prime?"),
       ),
       body: ListView.builder(
+        addAutomaticKeepAlives: false,
+        cacheExtent: 100.0,
         itemBuilder: (context, index) => ListCard(
           number: index,
           isPrime: PrimeChecker.isPrime(index),
